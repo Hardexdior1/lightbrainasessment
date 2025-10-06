@@ -8,9 +8,8 @@ export const examSchema = z.object({
   dateCreated: z.string().min(1, "Creation date is required"),
   dateDue: z.string().min(1, "Due date is required"),
   weight: z.string().min(1, "Weight is required"),
-
-  maxPoints: z.coerce.number().min(1, "Maximum points is required"),
-  passingThreshold: z.coerce.number().min(1, "Passing threshold is required"),
+  maxPoints: z.coerce.number().min(1, "Maximum points must be at least 1"),
+  passingThreshold: z.coerce.number().min(1, "Passing threshold must be at least 1%"),
 
   visible: z.boolean(),
 });

@@ -7,7 +7,7 @@ import Link from "next/link";
 const Aside = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  let pathname = 'Dashboard';
+  const  pathname = 'Dashboard';
 
   return (
     <>

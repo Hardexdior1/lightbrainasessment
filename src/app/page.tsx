@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 import CreateEditModal from "./components/CreateEditExam";
-import { MdCreateNewFolder, MdRemove } from "react-icons/md";
+import { MdCreateNewFolder } from "react-icons/md";
 import { PiExportLight } from "react-icons/pi";
 import { Exam } from "@/types/page";
 import { formatDate } from './components/Format'
@@ -54,31 +54,19 @@ const ExamDashboard: React.FC = () => {
     setEditingExam(null);
   };
 
-  const handleSearch = (query: string) => {
-    // Implement search logic here
-    if (query.trim() === "") {
-      const stored = localStorage.getItem("exams");
-      if (stored) setExams(JSON.parse(stored));
-      return;
-    }
-    const filtered = exams.filter((exam) =>
-      exam.title.toLowerCase().includes(query.toLowerCase())
-    );
-    setExams(filtered);
-    console.log("Searching for:", query);
-  }
+  
 
 
 
   return (
     <section className="w-fulll px-4 flex flex-col gap-14">
-      <Search handleSearch={handleSearch} exams={fullExams} setExams={setExams}  />
+      <Search  fullExams={fullExams}  setExams={setExams}   />
       <CreateEditModal title={title} exams={exams}  showCreateEdit={showCreateEdit} setShowCreateEdit={setShowCreateEdit } editingExam={editingExam} setEditingExam={setEditingExam} setExams={setExams} onCancel={handleCancel}
   />
 
 {exams.length === 0 ? (
   <div className="text-center text-2xl font-semibold">
-    No exam created yet start by creating a new exam
+    No exam created yet or found for the search term.
   </div>
 ) : (
 <>
