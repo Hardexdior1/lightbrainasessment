@@ -1,5 +1,5 @@
 'use client'
-import { Exam } from "../types/page";
+import { Exam } from "@/types/page";
 import { CiSearch } from "react-icons/ci";
 import { formatDate } from "./Format";
 import { useState } from "react";

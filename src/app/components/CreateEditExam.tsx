@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
 import { useEffect } from "react";
-import { Exam } from "../types/page";
+import { Exam } from "@/types/page";
 
   type ExamFormData = z.infer<typeof examSchema>;
 

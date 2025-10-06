@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import CreateEditModal from "./components/CreateEditExam";
 import { MdCreateNewFolder, MdRemove } from "react-icons/md";
 import { PiExportLight } from "react-icons/pi";
-import { Exam } from "./types/page";
+import { Exam } from "@/types/page";
 import { formatDate } from './components/Format'
 import Search from "./components/SearchComponent";
 import {  Edit } from "lucide-react";
